@@ -1,0 +1,132 @@
+<!--This site is designed to help teachers or students get started with 3D design and printing.  Too many of the resources focus on how to do it, not how to get started.-->
+
+<body>
+  <div class="jumbotron">
+    <h1>3D Basics</h1>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="well">
+            <a href="https://codepen.io/emm2305/pen/8f27d33071a11ac22b12943e0506eaee" target="_blank">
+              <h2>Thinking in 3D</h2>
+            </a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="well">
+          <a href="https://codepen.io/emm2305/pen/96a99993ecdf5b27bd0247ad74b8965c" target="_blank">
+            <h2>Design Tips</h2>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="well">
+          <a href="https://codepen.io/emm2305/pen/9c970c6a4d26798719eb0b21ee35cca4" target="_blank">
+            <h2>Printing Basics</h2></a>
+        </div>
+      </div>
+          <div class="col-xs-3">
+        <div class="well">
+          <a href="#">
+            <h2>Software Types</h2></a>
+        </div>
+      </div>    
+    </div>
+  </div>
+ <br>
+<h2 class="subheading">Solids or Faces?</h2>
+
+ <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/house.jpg" alt="house made of solids">
+      </div>
+      <div class="col-xs-9">
+        <p>There are two ways to model in 3D. The simplest to learn for many people is to start with solid shapes and combine them to get the finished product. <a href="https://www.tinkercad.com">TinkerCad</a> uses this process. In this example the house
+          is made up of a rectangular prism and a triangular prism.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/extrudeface.png" alt="face being extruded">
+      </div>
+      <div class="col-xs-9">
+        <p>The professional software starts with sketches. Those 2-dimensional shapes or faces are then extruded into 3-dimensional shapes. This is a more powerful option but can be difficult for beginners to understand. Programs such as Fusion360 offer
+          free licenses for students and eductators to use. </p>
+      </div>
+    </div>
+  </div>
+ <br> 
+  <div>
+    <div class="container">
+      <h2>What is the best software for you to start with?</h2>
+      <p>Use this form to figure out what program would be best for your or your students to use.</p>
+      <div class="form-group" id="gradeLevel">
+        <p><b>Please select the grade level you are in or that you teach:</b></p>
+        <label id=class="radio-inline"><input type="radio" name="optradio" id="elem" checked>Elementary</label>
+        <label class="radio-inline"><input type="radio" name="optradio" id="middle">Middle</label>
+        <label class="radio-inline"><input type="radio" name="optradio" id="high">High</label>
+        <label class="radio-inline"><input type="radio" name="optradio" id="college">College</label>
+        <label class="radio-inline"><input type="radio" name="optradio" id="na">Not applicable</label>
+      </div>
+      <div class="form-group">
+        <p><b>What is your skill level?</b></p>
+        <div class="checkbox">
+          <label><input type="checkbox" id="never">I have never done any 3D design on the computer.</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="draw">I know how to draw 3D plans on paper from multiple perspectives.</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="someT">I have some experience using TinkerCad.</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="tinker">I am proficient in TinkerCad.</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="someC">I have some experience using a CAD program such as Fusion360, Inventor, or Sketchup.</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="cad">I am a proficient CAD user.</label>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-default" onclick="whichProgram()" onblur="resetForm()">Submit</button>
+      </div>
+      <br>
+      <div>
+        <p id="suggestion">
+          <p>
+      </div>
+      <br>
+      <h2>Have more questions? Send me an email.</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="name" class="form-control" id="name" placeholder="Enter your name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Please enter your email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="comment"><b>Comment:</b></label>
+        <textarea class="form-control" rows="5" cols=1></textarea>
+      </div>
+      <div>
+        <button type="submit" onclick=thanks() class="btn btn-default">Send Email</button>
+      </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<div class="footer">
+  <p>By Betsy</p>
+  <p>Created for MSTU5003 summer '19'</p>
+</div>
+</body>

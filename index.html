@@ -1,0 +1,180 @@
+<!--This site is designed to help teachers or students get started with 3D design and printing.  Too many of the resources focus on how to do it, not how to get started.-->
+
+<body>
+  <div class="jumbotron">
+    <h1>3D Basics</h1>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="well">
+          <div class="dropdown">
+            <a href="#">
+              <h2>Thinking in 3D<span class="caret"></span></h2>
+            </a>
+            <div class="dropdown-content">
+              <a href="#2D">2D vs. 3D</a>
+              <br> <a href="#shapes">Decomposing Shapes</a>
+              <br> <a href="#goToQuiz">Quiz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="well">
+          <a href="https://codepen.io/emm2305/pen/96a99993ecdf5b27bd0247ad74b8965c" target="_blank">
+            <h2>Design Tips</h2>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="well">
+          <a href="https://codepen.io/emm2305/pen/9c970c6a4d26798719eb0b21ee35cca4" target="_blank">
+            <h2>Printing Basics</h2</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="well">
+          <a href="https://codepen.io/emm2305/pen/99ce79c83743c905a24879bea6bf3ba0" target="_blank">
+            <h2>Software Types</h2</a>
+        </div>
+      </div>        
+    </div>
+  </div>
+  <div>
+    <a class="subheadingID" id="2D">
+      <h2 class="subheading">2D vs. 3D</h2>
+    </a>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/300px-Cartesian-coordinate-system.svg.png" alt="xy grid">
+      </div>
+      <div class="col-xs-9">
+        <p>Most of us learn how to plot points on a coordinate grid in school. We may have started learning how to do this as early as 2nd grade when we learned about maps and continued to develop these skills through algebra</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/xyzCoordinates.jpg" alt="xy grid"> </div>
+      <div class="col-xs-9">
+        <p>Learning to thinking in 3 dimensions (3D) on a flat surface such as a textbook, piece of paper, or computer screen is so much harder. Most students do not ever encounter this at school, especially if they do not take calculus. This is terrible for the future
+          of design since physical objects are 3-dimensional and the tools we use to model them are not. Students need to become familiar with manipulating 3D objects in a 2D design world</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <br>
+    <a class="subheadingID" id="shapes">
+      <h2 class="subheading">Decomposing Shapes</h2>
+    </a>
+  </div>
+  <div>
+    <!--Schoolhouse shapes-->
+    <p>All objects are composed of a variety of shapes. Shapes can be combined together, intersected, or subtracted from each other to form endless possible combinations. Part of learning how to 3D model, is to learn how to see objects in the world as made
+      up of various shapes. As your skills grow and software becomes more complex you can move away from this some but for beginners this is a critical skill.</p>
+    <h3 style="font-size:14px">Click on the different parts of the schoolhouse to see what shapes it is made out of</h3>
+    <img id="schoolPic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/schoolhouse.jpg" usemap="#school" alt="school house" style="width:600px">
+    <map name="school">
+    <area target="" alt="roof" title="roof" onclick=roofShape() coords="72,134,156,88,392,46,471,129,296,113,73,138,73,132,180,125,314,111,455,132,294,116,79,138,73,138" shape="poly">
+    <area target="" alt="chimney" title="chimney" onclick=chimneyShape() coords="170,51,182,46,194,51,191,80,169,85,168,77" shape="poly">
+    <area target="" alt="building" title="building" onclick=buildingShape()  coords="86,267,86,141,305,119,459,132,459,249,426,249,359,253,362,279,307,283,348,281,283,282" shape="poly">
+    <area target="" alt="stairs" title="stairs" onclick=stairsShape() coords="421,286,419,254,480,251,534,291,464,299" shape="poly">
+   </map>
+  </div>
+  <div id="shapeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick=modalClose()>&times;</span>
+      <p id="modalText"></p>
+      <img id="modalImage" src="blank.png" alt="shape"></img>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid">
+    <!--Table shapes-->
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="http://clipart-library.com/data_images/331902.png" alt="table">
+      </div>
+      <div class="col-xs-9">
+        <div class="form-group">
+          <label for="comment"><b>What shapes do you see in this table?</b></label>
+          <textarea class="form-control" rows="2" cols=1></textarea>
+        </div>
+        <div class="row">
+          <div class="col-xs-2">
+            <button onclick="tableShapes()">Sample Answer</button> </div>
+          <div class="col-xs-10">
+            <p id="table"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/pine_tree.jpg" alt="tree">
+        </div>
+        <div class="col-xs-9">
+          <div class="form-group">
+            <label for="comment"><b>What shapes do you see in this tree?</b></label>
+            <textarea class="form-control" rows="2" cols=1></textarea>
+          </div>
+          <div class="row">
+            <div class="col-xs-2">
+              <button onclick="treeShapes()">Sample Answer</button>
+            </div>
+            <div class="col-xs-10">
+              <p id="tree"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-2">
+              <button onclick="showGif()" onblur="hideGif()" id="animateTree" style="display:none;">Show Me!</button>
+            </div>
+            <div class="col-xs-10">
+              <img id="treeAnimation" style="display:none;" src="https://media.giphy.com/media/ftBwneor2aqGcuypIZ/giphy.gif" alt="tree animation"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  </div>
+  </div>
+  <br>
+  <div>
+  <a class="subheadingID" id="goToQuiz">
+      <h2 class="subheading">Quiz Yourself</h2>
+    </a>
+  </div>
+  <div>
+  <p>Think you are ready to take the 3D quiz?</p>
+  <button onclick="makeQuiz()">I'm Ready</button>
+  </div>
+  <div id="quizContent" style="display:none">
+    <div id="quiz"></div>
+  <div>
+  <button id="submitQuiz" onclick=displayResults()>Submit answers</button>
+  </div>
+    </div>
+  <div id="results"></div>
+  <br>
+  
+  
+  
+
+</body>
+
+</html>
+<div class="footer">
+  <p>By Betsy</p>
+  <p>Created for MSTU5003 summer '19'</p>
+</div>
+</body>
