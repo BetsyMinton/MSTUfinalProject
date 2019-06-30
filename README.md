@@ -15,6 +15,10 @@ Hillary and I chatted some about our projects and I attended the online meeting 
 ## Submission
 
 [My Final Page](https://emm2305.github.io/MSTUfinalProject/) 
+
 [YouTube Video]( https://youtu.be/PYkcmm90mdo)
+
 [My Git Hub repository](https://github.com/emm2305/MSTUfinalProject)
+
+[My Code Pen with working modal](https://codepen.io/emm2305/pen/8f27d33071a11ac22b12943e0506eaee)
 
