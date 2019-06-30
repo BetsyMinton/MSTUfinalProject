@@ -101,3 +101,63 @@ function makeQuiz(){
   document.getElementById("q1").innerHTML = questions[0].question;
   document.getElementById("1a1").innerHTML = questions[0].answers[0].a;
 }
+
+/*
+This last function is really complex but takes the information you provide in the form and gives you a suggestion
+
+*/
+function whichProgram() {
+  if (document.getElementById("elem").checked) {
+    var grade = 0;
+  } else if (document.getElementById("middle").checked) {
+    var grade = 1;
+  } else {
+    var grade = 2;
+  }
+  var a = -1;
+  if (document.getElementById("draw").checked) {
+    var b = 2;
+  } else {
+    var b = 0;
+  }
+  if (document.getElementById("someT").checked) {
+    var c = 1;
+  } else {
+    var c = 0;
+  }
+  if (document.getElementById("tinker").checked) {
+    var d = 2;
+  } else {
+    var d = 0;
+  }
+  if (document.getElementById("someC").checked) {
+    var e = 2;
+  } else {
+    var e = 0;
+  }
+  if (document.getElementById("cad").checked) {
+    var f = 3;
+  } else {
+    var f = 0;
+  }
+  var level = a + b + c + d + e + f;
+  var suggest = grade + level;
+  if (suggest == 0 || grade == 0) {
+    document.getElementById("suggestion").innerHTML =
+      "<b>You should start out with TinkerCad! </b> If you have any questions, fill out the form below with more information and I will contact you";
+  } else if (suggest <= 4) {
+    document.getElementById("suggestion").innerHTML =
+      "<b>You should start out with TinkerCad but move on to a regular CAD program once you get the hang of working in 3D. </b> If you have any questions, fill out the form below with more information and I will contact you";
+  } else if (suggest > 4) {
+    document.getElementById("suggestion").innerHTML =
+      "<b> You should start out in a regular CAD program. </b> If you have any questions, fill out the form below with more information and I will contact you";
+  }
+}
+
+function thanks() {
+  var userName = document.getElementById("name").value;
+  alert(`Thank you ${userName}.  I will get back to you shortly`)
+  console.log(userName);
+}
+
+
