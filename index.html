@@ -87,15 +87,15 @@
     <h3 style="font-size:14px">Click on the different parts of the schoolhouse to see what shapes it is made out of</h3>
     <img id="schoolPic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/schoolhouse.jpg" usemap="#school" alt="school house" style="width:600px">
     <map name="school">
-    <area target="" alt="roof" title="roof" onclick=roofShape() coords="72,134,156,88,392,46,471,129,296,113,73,138,73,132,180,125,314,111,455,132,294,116,79,138,73,138" shape="poly">
-    <area target="" alt="chimney" title="chimney" onclick=chimneyShape() coords="170,51,182,46,194,51,191,80,169,85,168,77" shape="poly">
-    <area target="" alt="building" title="building" onclick=buildingShape()  coords="86,267,86,141,305,119,459,132,459,249,426,249,359,253,362,279,307,283,348,281,283,282" shape="poly">
-    <area target="" alt="stairs" title="stairs" onclick=stairsShape() coords="421,286,419,254,480,251,534,291,464,299" shape="poly">
+    <area target="" alt="roof" title="roof" onclick="roofShape()" coords="72,134,156,88,392,46,471,129,296,113,73,138,73,132,180,125,314,111,455,132,294,116,79,138,73,138" shape="poly">
+    <area target="" alt="chimney" title="chimney" onclick="chimneyShape()" coords="170,51,182,46,194,51,191,80,169,85,168,77" shape="poly">
+    <area target="" alt="building" title="building" onclick="buildingShape()"  coords="86,267,86,141,305,119,459,132,459,249,426,249,359,253,362,279,307,283,348,281,283,282" shape="poly">
+    <area target="" alt="stairs" title="stairs" onclick="stairsShape()" coords="421,286,419,254,480,251,534,291,464,299" shape="poly">
    </map>
   </div>
   <div id="shapeModal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick=modalClose()>&times;</span>
+      <span class="close" onclick="modalClose()">&times;</span>
       <p id="modalText"></p>
       <img id="modalImage" src="blank.png" alt="shape"></img>
     </div>
