@@ -176,8 +176,6 @@
 </div>
          
 <script>
-var modal = document.getElementById("shapeModal");
-
 var popUpImages = [
   "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/chimney.png",
   "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/building.png",
@@ -186,35 +184,35 @@ var popUpImages = [
 ];
 
 function roofShape() {
-  modal.style.display = "block";
+  document.getElementById("shapeModal").style.display = "block";
   document.getElementById("modalText").innerHTML =
     "The roof and top part of the building combine together to form a triangular prism";
   document.getElementById("modalImage").src = popUpImages[2];
 }
 
 function buildingShape() {
-  modal.style.display = "block";
+  document.getElementById("shapeModal").style.display = "block";
   document.getElementById("modalText").innerHTML =
     "The main part of the building is a rectangular prism";
   document.getElementById("modalImage").src = popUpImages[1];
 }
 
 function chimneyShape() {
-  modal.style.display = "block";
+  document.getElementById("shapeModal").style.display = "block";
   document.getElementById("modalText").innerHTML =
     "The chimney is a rectangular prism.";
   document.getElementById("modalImage").src = popUpImages[0];
 }
 
 function stairsShape() {
-  modal.style.display = "block";
+  document.getElementById("shapeModal").style.display = "block";
   document.getElementById("modalText").innerHTML =
     "The main shape of the stairs is a triangular prism.";
   document.getElementById("modalImage").src = popUpImages[3];
 }
 
 function modalClose() {
-  modal.style.display = "none";
+  document.getElementById("shapeModal").style.display = "none";
 }
   <div id="shapeModal" class="modal">
     <div class="modal-content">
