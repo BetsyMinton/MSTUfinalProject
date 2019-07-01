@@ -93,56 +93,7 @@
     <area target="" alt="stairs" title="stairs" onclick="stairsShape()" coords="421,286,419,254,480,251,534,291,464,299" shape="poly">
    </map>
   </div>
-          
-<script>
-var modal = document.getElementById("shapeModal");
-
-var popUpImages = [
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/chimney.png",
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/building.png",
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/roof.png",
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/stairs.png"
-];
-
-function roofShape() {
-  modal.style.display = "block";
-  document.getElementById("modalText").innerHTML =
-    "The roof and top part of the building combine together to form a triangular prism";
-  document.getElementById("modalImage").src = popUpImages[2];
-}
-
-function buildingShape() {
-  modal.style.display = "block";
-  document.getElementById("modalText").innerHTML =
-    "The main part of the building is a rectangular prism";
-  document.getElementById("modalImage").src = popUpImages[1];
-}
-
-function chimneyShape() {
-  modal.style.display = "block";
-  document.getElementById("modalText").innerHTML =
-    "The chimney is a rectangular prism.";
-  document.getElementById("modalImage").src = popUpImages[0];
-}
-
-function stairsShape() {
-  modal.style.display = "block";
-  document.getElementById("modalText").innerHTML =
-    "The main shape of the stairs is a triangular prism.";
-  document.getElementById("modalImage").src = popUpImages[3];
-}
-
-function modalClose() {
-  modal.style.display = "none";
-}
-  <div id="shapeModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="modalClose()">&times;</span>
-      <p id="modalText"></p>
-      <img id="modalImage" src="blank.png" alt="shape"></img>
-    </div>
-  </div>
-          </script>
+ 
   <br>
   <div class="container-fluid">
     <!--Table shapes-->
@@ -229,5 +180,56 @@ function modalClose() {
   <p>By Betsy</p>
   <p>Created for MSTU5003 summer '19'</p>
 </div>
-</body>
+         
+<script>
+var modal = document.getElementById("shapeModal");
+
+var popUpImages = [
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/chimney.png",
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/building.png",
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/roof.png",
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3226760/stairs.png"
+];
+
+function roofShape() {
+  modal.style.display = "block";
+  document.getElementById("modalText").innerHTML =
+    "The roof and top part of the building combine together to form a triangular prism";
+  document.getElementById("modalImage").src = popUpImages[2];
+}
+
+function buildingShape() {
+  modal.style.display = "block";
+  document.getElementById("modalText").innerHTML =
+    "The main part of the building is a rectangular prism";
+  document.getElementById("modalImage").src = popUpImages[1];
+}
+
+function chimneyShape() {
+  modal.style.display = "block";
+  document.getElementById("modalText").innerHTML =
+    "The chimney is a rectangular prism.";
+  document.getElementById("modalImage").src = popUpImages[0];
+}
+
+function stairsShape() {
+  modal.style.display = "block";
+  document.getElementById("modalText").innerHTML =
+    "The main shape of the stairs is a triangular prism.";
+  document.getElementById("modalImage").src = popUpImages[3];
+}
+
+function modalClose() {
+  modal.style.display = "none";
+}
+  <div id="shapeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="modalClose()">&times;</span>
+      <p id="modalText"></p>
+      <img id="modalImage" src="blank.png" alt="shape"></img>
+    </div>
+  </div>
+          </script>
+  </body>
+
 </html>
